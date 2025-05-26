@@ -1,13 +1,14 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const connectDB = require('./config/db');
 const dotenv = require('dotenv');
 const projectRoutes = require('./routes/projectRoutes');
+const cors = require('cors');
 
 dotenv.config();
 connectDB();
 
 const app = express();
+app.use(cors({ origin: 'http://localhost:3000' }));
 app.use(express.json());
 
 app.get('/', (req, res) => {
