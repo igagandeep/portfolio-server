@@ -10,7 +10,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://igagandeep.github.io/Portfolio/']
+  origin: ['http://localhost:3000', 'https://igagandeep.github.io']
 }));
 
 app.use(express.json());
