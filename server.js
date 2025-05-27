@@ -10,7 +10,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://igagandeep.github.io']
+  origin: ['http://localhost:3000', 'https://igagandeep.github.io', 'https://portfolio-eight-theta-66.vercel.app']
 }));
 
 app.use(express.json());
