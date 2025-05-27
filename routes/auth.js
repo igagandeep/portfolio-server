@@ -8,7 +8,6 @@ const { ADMIN_USER, ADMIN_PASS, JWT_SECRET } = process.env;
 // POST /api/login
 router.post('/', (req, res) => {
   const { user, pass } = req.body;
-    console.log('incoming body:', req.body);
   console.log('ENV creds:', ADMIN_USER, ADMIN_PASS);
   if (user === ADMIN_USER && pass === ADMIN_PASS) {
     console.log("user", user, "password", pass)
