@@ -1,10 +1,10 @@
+require('dotenv').config(); 
 const express = require('express');
 const connectDB = require('./config/db');
-const dotenv = require('dotenv');
 const projectRoutes = require('./routes/projectRoutes');
+const authRoute  = require('./routes/auth');
 const cors = require('cors');
 
-dotenv.config();
 connectDB();
 
 const app = express();
@@ -14,6 +14,8 @@ app.use(express.json());
 app.get('/', (req, res) => {
   res.send('🌐 Portfolio API Running');
 });
+
+app.use('/api/login', authRoute);
 
 app.use('/api/projects', projectRoutes);
 
